@@ -35,9 +35,10 @@ pipeline {
                 script{
                      //withCredentials([usernamePassword(credentialsId: 'ansible-credentials', 
                      //usernameVariable: 'ANSIBLE_USER', passwordVariable: 'ANSIBLE_PASSWORD')]) 
+                    //ansible-playbook -i ${WORKSPACE}/inventory ${WORKSPACE}/tool.yml --private-key ${WORKSPACE}/tool/ninja.pem
                     //{
                         sh """
-                            ansible-playbook -i ${WORKSPACE}/inventory ${WORKSPACE}/tool.yml --private-key ${WORKSPACE}/tool/ninja.pem
+                            ansible-playbook -i /var/lib/jenkins/workspace/assignment6/mysql-tool/inventory /var/lib/jenkins/workspace/assignment6/mysql-tool/tool.yml --private-key /var/lib/jenkins/workspace/assignment6/mysql-tool/tool/ninja.pem
                         """
                     //}
                 }
