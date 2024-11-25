@@ -38,7 +38,7 @@ pipeline {
                     //ansible-playbook -i ${WORKSPACE}/inventory ${WORKSPACE}/tool.yml --private-key ${WORKSPACE}/tool/ninja.pem
                     //{
                         sh """
-                            ansible-playbook -i /var/lib/jenkins/workspace/assignment6/mysql-tool/inventory /var/lib/jenkins/workspace/assignment6/mysql-tool/tool.yml --private-key /var/lib/jenkins/workspace/assignment6/mysql-tool/tool/ninja.pem
+                            ansible-playbook -i ${WORKSPACE}/inventory ${WORKSPACE}/tool.yml --private-key ${WORKSPACE}/tool/ninja.pem
                         """
                     //}
                 }
