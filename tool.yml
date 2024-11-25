@@ -1,6 +1,6 @@
 - name: setup Mysql with medium_db db and remote login
   become: yes
-  hosts: all
+  hosts: localhost
   vars:
     - db_user: medium_post
     - db_pass: mebium123
