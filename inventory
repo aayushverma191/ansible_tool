@@ -1,4 +1,1 @@
-[web]
-web1 ansible_host=3.80.38.228 ansible_user=ubuntu ansible_ssh_key=./ninja.pem 
-
-#localhost
+localhost
